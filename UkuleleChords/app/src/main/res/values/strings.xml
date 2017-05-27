@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">UkuleleChords</string>
+
+    <string name="banner_ad">Banner Ad</string>
+    <string name="interstitial_ad">Interstitial Ad</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="interstitial_load">Load Interstitial</string>
+    <string name="interstitial_not_ready">Interstitial Not Ready</string>
+    <string name="interstitial_loading">Loading Interstitial</string>
+    <string name="interstitial_show">Show Interstitial</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+
+    <string name="ad_test_device">Not Defined</string>
+
+    <string name="category_guitar">Guitar</string>
+    <string name="category_guitar_seven">7-String Guitar</string>
+    <string name="category_bass">Bass</string>
+    <string name="category_ukulele">Ukulele</string>
+
+    <string name="category_chord">Chord</string>
+    <string name="category_selected_chord">Selected Chord</string>
+
+</resources>
