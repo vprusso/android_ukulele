@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UkuleleChords</string>
+    <string name="app_name">Ukulele Trainor</string>
 
     <string name="banner_ad">Banner Ad</string>
     <string name="interstitial_ad">Interstitial Ad</string>
@@ -14,10 +14,9 @@
 
     <string name="ad_test_device">Not Defined</string>
 
-    <string name="category_guitar">Guitar</string>
-    <string name="category_guitar_seven">7-String Guitar</string>
-    <string name="category_bass">Bass</string>
-    <string name="category_ukulele">Ukulele</string>
+    <string name="category_ukulele">Ukulele Chords</string>
+    <string name="category_ukulele_scales">Ukulele Scales</string>
+    <string name="category_ukulele_tuner">Ukulele Tuner</string>
 
     <string name="category_chord">Chord</string>
     <string name="category_selected_chord">Selected Chord</string>

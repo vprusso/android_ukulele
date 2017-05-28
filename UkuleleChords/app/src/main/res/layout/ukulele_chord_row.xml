@@ -9,7 +9,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_margin="5dp"
-        app:srcCompat="@drawable/ukulele_a_major" />
+        app:srcCompat="@drawable/ukulele_a_maj" />
 
     <TextView
         android:id="@+id/ukuleleChordTextView"
@@ -18,4 +18,13 @@
         android:layout_margin="5dp"
         android:layout_weight="1"
         android:text="TextView" />
+
+    <TextView
+        android:id="@+id/ukuleleVerboseChordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:text="TextView" />
+
 </LinearLayout>

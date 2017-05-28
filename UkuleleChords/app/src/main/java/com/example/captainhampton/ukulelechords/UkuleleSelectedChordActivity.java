@@ -13,15 +13,15 @@ public class UkuleleSelectedChordActivity extends AppCompatActivity {
 
         String ukulele_chord = getIntent().getStringExtra("UKULELE_CHORD_ID");
 
-        if (ukulele_chord.equals("A Major")) {
-            final String[] ukulele_chords = {"A Major"};
+        if (ukulele_chord.equals("A maj")) {
+            final String[] ukulele_chords = {"A maj"};
 
             ListAdapter selectedChordAdapter = new UkuleleSelectedChordAdapter(this, ukulele_chords);
             ListView selectedChordsListView = (ListView) findViewById(R.id.ukuleleSelectedChordsListView);
             selectedChordsListView.setAdapter(selectedChordAdapter);
 
-        } else {
-            final String[] ukulele_chords = {"G Major"};
+        } else if (ukulele_chord.equals("A min")) {
+            final String[] ukulele_chords = {"A min"};
 
             ListAdapter selectedChordAdapter = new UkuleleSelectedChordAdapter(this, ukulele_chords);
             ListView selectedChordsListView = (ListView) findViewById(R.id.ukuleleSelectedChordsListView);

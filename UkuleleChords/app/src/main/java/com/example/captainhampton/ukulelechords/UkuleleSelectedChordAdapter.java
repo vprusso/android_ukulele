@@ -22,34 +22,34 @@ public class UkuleleSelectedChordAdapter extends ArrayAdapter<String>{
         LayoutInflater selectedChordInflator = LayoutInflater.from(getContext());
         View selectedChordView = selectedChordInflator.inflate(R.layout.ukulele_selected_chord_row, parent, false);
 
-        String selected_chord = getItem(position);
+        final String selected_chord = getItem(position);
         TextView selectedChordTextView = (TextView) selectedChordView.findViewById(R.id.selectedUkuleleChordTextView);
         ImageView selectedChordDiagramImageView = (ImageView) selectedChordView.findViewById(R.id.selectedChordDiagramImageView);
         ImageButton selectedChordImageButton = (ImageButton) selectedChordView.findViewById(R.id.playChordImageButton);
 
         selectedChordTextView.setText(selected_chord);
 
-        if (selected_chord.equals("A Major")) {
-            selectedChordDiagramImageView.setImageResource(R.drawable.ukulele_a_major);
+        if (selected_chord.equals("A maj")) {
+            selectedChordDiagramImageView.setImageResource(R.drawable.ukulele_a_maj);
 
             final MediaPlayer mp = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), R.raw.color_black);
             selectedChordImageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     mp.start();
-                    Toast.makeText(UkuleleSelectedChordAdapter.this.getContext(), "TEST", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UkuleleSelectedChordAdapter.this.getContext(), selected_chord, Toast.LENGTH_SHORT).show();
                 }
             });
         }
-        else {
-            selectedChordDiagramImageView.setImageResource(R.drawable.ukulele_g_major);
+        else if (selected_chord.equals("A min")) {
+            selectedChordDiagramImageView.setImageResource(R.drawable.ukulele_a_min);
 
             final MediaPlayer mp = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), R.raw.color_black);
             selectedChordImageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     mp.start();
-                    Toast.makeText(UkuleleSelectedChordAdapter.this.getContext(), "TESTFUCK", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UkuleleSelectedChordAdapter.this.getContext(), selected_chord, Toast.LENGTH_SHORT).show();
                 }
             });
         }

@@ -18,6 +18,18 @@
             android:background="@color/category_ukulele"
             android:text="@string/category_ukulele" />
 
+        <TextView
+            android:id="@+id/ukulele_scales"
+            style="@style/CategoryStyle"
+            android:background="@color/category_ukulele_scales"
+            android:text="@string/category_ukulele_scales" />
+
+        <TextView
+            android:id="@+id/ukulele_tuner"
+            style="@style/CategoryStyle"
+            android:background="@color/category_ukulele_tuner"
+            android:text="@string/category_ukulele_tuner" />
+
     </LinearLayout>
 
     <com.google.android.gms.ads.AdView
