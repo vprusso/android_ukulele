@@ -6,27 +6,20 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 public class UkuleleSelectedChordActivity extends AppCompatActivity {
+
+    public void ukuleleSelectedChordViewTransition(String[] ukulele_chords) {
+        ListAdapter selectedChordAdapter = new UkuleleSelectedChordAdapter(this, ukulele_chords);
+        ListView selectedChordsListView = (ListView) findViewById(R.id.ukuleleSelectedChordsListView);
+        selectedChordsListView.setAdapter(selectedChordAdapter);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ukulele_selected_chord);
 
         String ukulele_chord = getIntent().getStringExtra("UKULELE_CHORD_ID");
-
-        if (ukulele_chord.equals("A maj")) {
-            final String[] ukulele_chords = {"A maj"};
-
-            ListAdapter selectedChordAdapter = new UkuleleSelectedChordAdapter(this, ukulele_chords);
-            ListView selectedChordsListView = (ListView) findViewById(R.id.ukuleleSelectedChordsListView);
-            selectedChordsListView.setAdapter(selectedChordAdapter);
-
-        } else if (ukulele_chord.equals("A min")) {
-            final String[] ukulele_chords = {"A min"};
-
-            ListAdapter selectedChordAdapter = new UkuleleSelectedChordAdapter(this, ukulele_chords);
-            ListView selectedChordsListView = (ListView) findViewById(R.id.ukuleleSelectedChordsListView);
-            selectedChordsListView.setAdapter(selectedChordAdapter);
-
-        }
+        final String[] ukulele_chords = { ukulele_chord };
+        ukuleleSelectedChordViewTransition(ukulele_chords);
     }
 }

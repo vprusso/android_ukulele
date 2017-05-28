@@ -29,9 +29,11 @@ public class UkuleleChordAdapter extends ArrayAdapter<String> {
         ukuleleVerboseChordTextView.setText(getVerboseChord(chord));
 
         if (chord.equals("A maj")) {
-            chordDiagramImageView.setImageResource(R.drawable.ukulele_a_maj);
-        } else {
-            chordDiagramImageView.setImageResource(R.drawable.ukulele_a_min);
+            chordDiagramImageView.setImageResource(R.drawable.a_maj);
+        } else if (chord.equals("A min")) {
+            chordDiagramImageView.setImageResource(R.drawable.a_min);
+        } else if (chord.equals("A aug")) {
+            chordDiagramImageView.setImageResource(R.drawable.a_aug);
         }
 
         return chordView;

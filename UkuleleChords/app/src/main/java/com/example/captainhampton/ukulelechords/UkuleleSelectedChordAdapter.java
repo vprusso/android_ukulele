@@ -17,6 +17,15 @@ public class UkuleleSelectedChordAdapter extends ArrayAdapter<String>{
         super(context, R.layout.ukulele_selected_chord_row, guitar_chord);
     }
 
+    public void setSelectedChordImageButton(final MediaPlayer selectedChordSound, ImageButton selectedChordImageButton) {
+        selectedChordImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedChordSound.start();
+            }
+        });
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater selectedChordInflator = LayoutInflater.from(getContext());
@@ -30,29 +39,21 @@ public class UkuleleSelectedChordAdapter extends ArrayAdapter<String>{
         selectedChordTextView.setText(selected_chord);
 
         if (selected_chord.equals("A maj")) {
-            selectedChordDiagramImageView.setImageResource(R.drawable.ukulele_a_maj);
+            selectedChordDiagramImageView.setImageResource(R.drawable.a_maj);
+            final MediaPlayer selectedChordSound = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), R.raw.a_maj);
+            setSelectedChordImageButton(selectedChordSound, selectedChordImageButton);
 
-            final MediaPlayer mp = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), R.raw.color_black);
-            selectedChordImageButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mp.start();
-                    Toast.makeText(UkuleleSelectedChordAdapter.this.getContext(), selected_chord, Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-        else if (selected_chord.equals("A min")) {
-            selectedChordDiagramImageView.setImageResource(R.drawable.ukulele_a_min);
+        } else if (selected_chord.equals("A min")) {
+            selectedChordDiagramImageView.setImageResource(R.drawable.a_min);
+            final MediaPlayer selectedChordSound = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), R.raw.a_min);
+            setSelectedChordImageButton(selectedChordSound, selectedChordImageButton);
 
-            final MediaPlayer mp = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), R.raw.color_black);
-            selectedChordImageButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mp.start();
-                    Toast.makeText(UkuleleSelectedChordAdapter.this.getContext(), selected_chord, Toast.LENGTH_SHORT).show();
-                }
-            });
+        } else if (selected_chord.equals("A aug")) {
+            selectedChordDiagramImageView.setImageResource(R.drawable.a_aug);
+            final MediaPlayer selectedChordSound = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), R.raw.a_aug);
+            setSelectedChordImageButton(selectedChordSound, selectedChordImageButton);
         }
+
 
         return selectedChordView;
     }
