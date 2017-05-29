@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.HashMap;
+
 
 public class UkuleleChordAdapter extends ArrayAdapter<String> {
 
@@ -28,13 +30,9 @@ public class UkuleleChordAdapter extends ArrayAdapter<String> {
         ukuleleChordTextView.setText(chord);
         ukuleleVerboseChordTextView.setText(getVerboseChord(chord));
 
-        if (chord.equals("A maj")) {
-            chordDiagramImageView.setImageResource(R.drawable.a_maj);
-        } else if (chord.equals("A min")) {
-            chordDiagramImageView.setImageResource(R.drawable.a_min);
-        } else if (chord.equals("A aug")) {
-            chordDiagramImageView.setImageResource(R.drawable.a_aug);
-        }
+        UkuleleChordUtil ukuleleChordUtil = new UkuleleChordUtil();
+        HashMap<String, Integer> chordDrawableHashMap = ukuleleChordUtil.getSelectedChordDrawableHashMap();
+        chordDiagramImageView.setImageResource(chordDrawableHashMap.get(chord));
 
         return chordView;
     }

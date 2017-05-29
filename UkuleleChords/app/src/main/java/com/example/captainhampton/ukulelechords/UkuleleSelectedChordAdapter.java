@@ -9,15 +9,17 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.util.HashMap;
 
 public class UkuleleSelectedChordAdapter extends ArrayAdapter<String>{
+
 
     public UkuleleSelectedChordAdapter(Context context, String[] guitar_chord) {
         super(context, R.layout.ukulele_selected_chord_row, guitar_chord);
     }
 
-    public void setSelectedChordImageButton(final MediaPlayer selectedChordSound, ImageButton selectedChordImageButton) {
+    public void setSelectedChordImageButton(final String selectedChord, final MediaPlayer selectedChordSound, ImageButton selectedChordImageButton) {
         selectedChordImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,28 +33,21 @@ public class UkuleleSelectedChordAdapter extends ArrayAdapter<String>{
         LayoutInflater selectedChordInflator = LayoutInflater.from(getContext());
         View selectedChordView = selectedChordInflator.inflate(R.layout.ukulele_selected_chord_row, parent, false);
 
-        final String selected_chord = getItem(position);
+        final String selectedChord = getItem(position);
         TextView selectedChordTextView = (TextView) selectedChordView.findViewById(R.id.selectedUkuleleChordTextView);
         ImageView selectedChordDiagramImageView = (ImageView) selectedChordView.findViewById(R.id.selectedChordDiagramImageView);
         ImageButton selectedChordImageButton = (ImageButton) selectedChordView.findViewById(R.id.playChordImageButton);
 
-        selectedChordTextView.setText(selected_chord);
+        selectedChordTextView.setText(selectedChord);
 
-        if (selected_chord.equals("A maj")) {
-            selectedChordDiagramImageView.setImageResource(R.drawable.a_maj);
-            final MediaPlayer selectedChordSound = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), R.raw.a_maj);
-            setSelectedChordImageButton(selectedChordSound, selectedChordImageButton);
+        UkuleleChordUtil ukuleleChordUtil = new UkuleleChordUtil();
+        HashMap<String, Integer> chordDrawableHashMap = ukuleleChordUtil.getSelectedChordDrawableHashMap();
+        HashMap<String, Integer> chordRawHashMap = ukuleleChordUtil.getSelectedChordRawHashMap();
 
-        } else if (selected_chord.equals("A min")) {
-            selectedChordDiagramImageView.setImageResource(R.drawable.a_min);
-            final MediaPlayer selectedChordSound = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), R.raw.a_min);
-            setSelectedChordImageButton(selectedChordSound, selectedChordImageButton);
+        selectedChordDiagramImageView.setImageResource(chordDrawableHashMap.get(selectedChord));
+        final MediaPlayer selectedChordSound = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), chordRawHashMap.get(selectedChord));
 
-        } else if (selected_chord.equals("A aug")) {
-            selectedChordDiagramImageView.setImageResource(R.drawable.a_aug);
-            final MediaPlayer selectedChordSound = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), R.raw.a_aug);
-            setSelectedChordImageButton(selectedChordSound, selectedChordImageButton);
-        }
+        setSelectedChordImageButton(selectedChord, selectedChordSound, selectedChordImageButton);
 
 
         return selectedChordView;
