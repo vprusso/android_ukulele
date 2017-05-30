@@ -37,6 +37,10 @@
             android:label="@string/category_selected_chord" />
 
         <activity
+            android:name=".AboutActivity"
+            android:label="@string/category_about" />
+
+        <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             />

@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Display banner ad at bottom of screen.
+
         displayBannerAd();
 
         // Start the ukulele as selected instrument.
-        TextView ukulele = (TextView) findViewById(R.id.ukulele);
-        ukulele.setOnClickListener(new View.OnClickListener() {
+        TextView ukuleleTextView = (TextView) findViewById(R.id.ukuleleTextView);
+        ukuleleTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent ukuleleIntent = new Intent(MainActivity.this, UkuleleActivity.class);
@@ -29,10 +29,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //
+        TextView aboutTextView = (TextView) findViewById(R.id.aboutTextView);
+        aboutTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(aboutIntent);
+            }
+        });
+
 
     }
 
-    private void displayBannerAd() {
+    public void displayBannerAd() {
         AdView adView = (AdView)findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
 

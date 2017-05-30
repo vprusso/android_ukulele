@@ -7,6 +7,7 @@ public class UkuleleChordUtil {
     public HashMap<String, Integer> getSelectedChordDrawableHashMap() {
         HashMap<String, Integer> hmap = new HashMap<String, Integer>();
 
+        /* CHORD : A */
         hmap.put("A maj", R.drawable.a_maj);
         hmap.put("A min", R.drawable.a_min);
         hmap.put("A aug", R.drawable.a_aug);
@@ -30,6 +31,134 @@ public class UkuleleChordUtil {
         hmap.put("A 7sus4", R.drawable.a_7sus4);
         hmap.put("A 7sus2", R.drawable.a_7sus2);
 
+        /* CHORD : A# */
+        hmap.put("A# maj", R.drawable.ashp_maj);
+        hmap.put("A# min", R.drawable.ashp_min);
+        hmap.put("A# aug", R.drawable.ashp_aug);
+        hmap.put("A# dim", R.drawable.ashp_dim);
+        hmap.put("A# dom7", R.drawable.ashp_dom7);
+        hmap.put("A# maj7", R.drawable.ashp_maj7);
+        hmap.put("A# min7", R.drawable.ashp_min7);
+        hmap.put("A# aug7", R.drawable.ashp_aug7);
+        hmap.put("A# dim7", R.drawable.ashp_dim7);
+        hmap.put("A# add9", R.drawable.ashp_add9);
+        hmap.put("A# madd9", R.drawable.ashp_madd9);
+        hmap.put("A# 6", R.drawable.ashp_6);
+        hmap.put("A# min6", R.drawable.ashp_min6);
+        hmap.put("A# 5", R.drawable.ashp_5);
+        hmap.put("A# dom9", R.drawable.ashp_dom9);
+        hmap.put("A# maj9", R.drawable.ashp_maj9);
+        hmap.put("A# min9", R.drawable.ashp_min9);
+        hmap.put("A# dom13", R.drawable.ashp_dom13);
+        hmap.put("A# sus4", R.drawable.ashp_sus4);
+        hmap.put("A# sus2", R.drawable.ashp_sus2);
+        hmap.put("A# 7sus4", R.drawable.ashp_7sus4);
+        hmap.put("A# 7sus2", R.drawable.ashp_7sus2);
+
+        /* CHORD : B */
+
+
+        /* CHORD : C */
+        hmap.put("C maj", R.drawable.c_maj);
+        hmap.put("C min", R.drawable.c_min);
+        hmap.put("C aug", R.drawable.c_aug);
+        hmap.put("C dim", R.drawable.c_dim);
+        hmap.put("C dom7", R.drawable.c_dom7);
+        hmap.put("C maj7", R.drawable.c_maj7);
+        hmap.put("C min7", R.drawable.c_min7);
+        hmap.put("C aug7", R.drawable.c_aug7);
+        hmap.put("C dim7", R.drawable.c_dim7);
+        hmap.put("C add9", R.drawable.c_add9);
+        hmap.put("C madd9", R.drawable.c_madd9);
+        hmap.put("C 6", R.drawable.c_6);
+        hmap.put("C min6", R.drawable.c_min6);
+        hmap.put("C 5", R.drawable.c_5);
+        hmap.put("C dom9", R.drawable.c_dom9);
+        hmap.put("C maj9", R.drawable.c_maj9);
+        hmap.put("C min9", R.drawable.c_min9);
+        hmap.put("C dom13", R.drawable.c_dom13);
+        hmap.put("C sus4", R.drawable.c_sus4);
+        hmap.put("C sus2", R.drawable.c_sus2);
+        hmap.put("C 7sus4", R.drawable.c_7sus4);
+        hmap.put("C 7sus2", R.drawable.c_7sus2);
+
+        /* CHORD : C# */
+        hmap.put("C# maj", R.drawable.cshp_maj);
+        hmap.put("C# min", R.drawable.cshp_min);
+        hmap.put("C# aug", R.drawable.cshp_aug);
+        hmap.put("C# dim", R.drawable.cshp_dim);
+        hmap.put("C# dom7", R.drawable.cshp_dom7);
+        hmap.put("C# maj7", R.drawable.cshp_maj7);
+        hmap.put("C# min7", R.drawable.cshp_min7);
+        hmap.put("C# aug7", R.drawable.cshp_aug7);
+        hmap.put("C# dim7", R.drawable.cshp_dim7);
+        hmap.put("C# add9", R.drawable.cshp_add9);
+        hmap.put("C# madd9", R.drawable.cshp_madd9);
+        hmap.put("C# 6", R.drawable.cshp_6);
+        hmap.put("C# min6", R.drawable.cshp_min6);
+        hmap.put("C# 5", R.drawable.cshp_5);
+        hmap.put("C# dom9", R.drawable.cshp_dom9);
+        hmap.put("C# maj9", R.drawable.cshp_maj9);
+        hmap.put("C# min9", R.drawable.cshp_min9);
+        hmap.put("C# dom13", R.drawable.cshp_dom13);
+        hmap.put("C# sus4", R.drawable.cshp_sus4);
+        hmap.put("C# sus2", R.drawable.cshp_sus2);
+        hmap.put("C# 7sus4", R.drawable.cshp_7sus4);
+        hmap.put("C# 7sus2", R.drawable.cshp_7sus2);
+
+        /* CHORD : D */
+        hmap.put("D maj", R.drawable.d_maj);
+        hmap.put("D min", R.drawable.d_min);
+        hmap.put("D aug", R.drawable.d_aug);
+        hmap.put("D dim", R.drawable.d_dim);
+        hmap.put("D dom7", R.drawable.d_dom7);
+        hmap.put("D maj7", R.drawable.d_maj7);
+        hmap.put("D min7", R.drawable.d_min7);
+        hmap.put("D aug7", R.drawable.d_aug7);
+        hmap.put("D dim7", R.drawable.d_dim7);
+        hmap.put("D add9", R.drawable.d_add9);
+        hmap.put("D madd9", R.drawable.d_madd9);
+        hmap.put("D 6", R.drawable.d_6);
+        hmap.put("D min6", R.drawable.d_min6);
+        hmap.put("D 5", R.drawable.d_5);
+        hmap.put("D dom9", R.drawable.d_dom9);
+        hmap.put("D maj9", R.drawable.d_maj9);
+        hmap.put("D min9", R.drawable.d_min9);
+        hmap.put("D dom13", R.drawable.d_dom13);
+        hmap.put("D sus4", R.drawable.d_sus4);
+        hmap.put("D sus2", R.drawable.d_sus2);
+        hmap.put("D 7sus4", R.drawable.d_7sus4);
+        hmap.put("D 7sus2", R.drawable.d_7sus2);
+
+        /* CHORD : D# */
+        hmap.put("D# maj", R.drawable.dshp_maj);
+        hmap.put("D# min", R.drawable.dshp_min);
+        hmap.put("D# aug", R.drawable.dshp_aug);
+        hmap.put("D# dim", R.drawable.dshp_dim);
+        hmap.put("D# dom7", R.drawable.dshp_dom7);
+        hmap.put("D# maj7", R.drawable.dshp_maj7);
+        hmap.put("D# min7", R.drawable.dshp_min7);
+        hmap.put("D# aug7", R.drawable.dshp_aug7);
+        hmap.put("D# dim7", R.drawable.dshp_dim7);
+        hmap.put("D# add9", R.drawable.dshp_add9);
+        hmap.put("D# madd9", R.drawable.dshp_madd9);
+        hmap.put("D# 6", R.drawable.dshp_6);
+        hmap.put("D# min6", R.drawable.dshp_min6);
+        hmap.put("D# 5", R.drawable.dshp_5);
+        hmap.put("D# dom9", R.drawable.dshp_dom9);
+        hmap.put("D# maj9", R.drawable.dshp_maj9);
+        hmap.put("D# min9", R.drawable.dshp_min9);
+        hmap.put("D# dom13", R.drawable.dshp_dom13);
+        hmap.put("D# sus4", R.drawable.dshp_sus4);
+        hmap.put("D# sus2", R.drawable.dshp_sus2);
+        hmap.put("D# 7sus4", R.drawable.dshp_7sus4);
+        hmap.put("D# 7sus2", R.drawable.dshp_7sus2);
+
+        /* CHORD : E */
+        /* CHORD : F */
+        /* CHORD : F# */
+        /* CHORD : G */
+        /* CHORD : G# */
 
 
         return hmap;

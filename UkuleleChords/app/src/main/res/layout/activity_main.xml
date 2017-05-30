@@ -13,22 +13,34 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/ukulele"
+            android:id="@+id/ukuleleTextView"
             style="@style/CategoryStyle"
             android:background="@color/category_ukulele"
             android:text="@string/category_ukulele" />
 
         <TextView
-            android:id="@+id/ukulele_scales"
+            android:id="@+id/ukuleleScalesTextView"
             style="@style/CategoryStyle"
             android:background="@color/category_ukulele_scales"
             android:text="@string/category_ukulele_scales" />
 
         <TextView
-            android:id="@+id/ukulele_tuner"
+            android:id="@+id/ukuleleTunerTextView"
             style="@style/CategoryStyle"
             android:background="@color/category_ukulele_tuner"
             android:text="@string/category_ukulele_tuner" />
+
+        <TextView
+            android:id="@+id/ukuleleChordSequencerTextView"
+            style="@style/CategoryStyle"
+            android:background="@color/category_ukulele_chord_sequencer"
+            android:text="@string/category_ukulele_chord_sequencer" />
+
+        <TextView
+            android:id="@+id/aboutTextView"
+            style="@style/CategoryStyle"
+            android:background="@color/category_about"
+            android:text="@string/category_about" />
 
     </LinearLayout>
 

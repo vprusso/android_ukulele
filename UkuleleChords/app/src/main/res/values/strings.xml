@@ -17,6 +17,8 @@
     <string name="category_ukulele">Ukulele Chords</string>
     <string name="category_ukulele_scales">Ukulele Scales</string>
     <string name="category_ukulele_tuner">Ukulele Tuner</string>
+    <string name="category_ukulele_chord_sequencer">Ukulele Chord Sequencer</string>
+    <string name="category_about">About</string>
 
     <string name="category_chord">Chord</string>
     <string name="category_selected_chord">Selected Chord</string>

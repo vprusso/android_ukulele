@@ -16,6 +16,7 @@
     <color name="category_ukulele">#16AFCA</color>
     <color name="category_ukulele_scales">#FD8E09</color>
     <color name="category_ukulele_tuner">#379237</color>
-    <color name="category_bass">#8800A0</color>
+    <color name="category_ukulele_chord_sequencer">#FF92FF</color>
+    <color name="category_about">#8800A0</color>
 
 </resources>
