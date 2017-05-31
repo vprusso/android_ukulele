@@ -56,7 +56,28 @@ public class UkuleleChordUtil {
         hmap.put("A# 7sus2", R.drawable.ashp_7sus2);
 
         /* CHORD : B */
-
+        hmap.put("B maj", R.drawable.b_maj);
+        hmap.put("B min", R.drawable.b_min);
+        hmap.put("B aug", R.drawable.b_aug);
+        hmap.put("B dim", R.drawable.b_dim);
+        hmap.put("B dom7", R.drawable.b_dom7);
+        hmap.put("B maj7", R.drawable.b_maj7);
+        hmap.put("B min7", R.drawable.b_min7);
+        hmap.put("B aug7", R.drawable.b_aug7);
+        hmap.put("B dim7", R.drawable.b_dim7);
+        hmap.put("B add9", R.drawable.b_add9);
+        hmap.put("B madd9", R.drawable.b_madd9);
+        hmap.put("B 6", R.drawable.b_6);
+        hmap.put("B min6", R.drawable.b_min6);
+        hmap.put("B 5", R.drawable.b_5);
+        hmap.put("B dom9", R.drawable.b_dom9);
+        hmap.put("B maj9", R.drawable.b_maj9);
+        hmap.put("B min9", R.drawable.b_min9);
+        hmap.put("B dom13", R.drawable.b_dom13);
+        hmap.put("B sus4", R.drawable.b_sus4);
+        hmap.put("B sus2", R.drawable.b_sus2);
+        hmap.put("B 7sus4", R.drawable.b_7sus4);
+        hmap.put("B 7sus2", R.drawable.b_7sus2);
 
         /* CHORD : C */
         hmap.put("C maj", R.drawable.c_maj);
@@ -155,9 +176,94 @@ public class UkuleleChordUtil {
         hmap.put("D# 7sus2", R.drawable.dshp_7sus2);
 
         /* CHORD : E */
+        hmap.put("E maj", R.drawable.e_maj);
+        hmap.put("E min", R.drawable.e_min);
+        hmap.put("E aug", R.drawable.e_aug);
+        hmap.put("E dim", R.drawable.e_dim);
+        hmap.put("E dom7", R.drawable.e_dom7);
+        hmap.put("E maj7", R.drawable.e_maj7);
+        hmap.put("E min7", R.drawable.e_min7);
+        hmap.put("E aug7", R.drawable.e_aug7);
+        hmap.put("E dim7", R.drawable.e_dim7);
+        hmap.put("E add9", R.drawable.e_add9);
+        hmap.put("E madd9", R.drawable.e_madd9);
+        hmap.put("E 6", R.drawable.e_6);
+        hmap.put("E min6", R.drawable.e_min6);
+        hmap.put("E 5", R.drawable.e_5);
+        hmap.put("E dom9", R.drawable.e_dom9);
+        hmap.put("E maj9", R.drawable.e_maj9);
+        hmap.put("E min9", R.drawable.e_min9);
+        hmap.put("E dom13", R.drawable.e_dom13);
+        hmap.put("E sus4", R.drawable.e_sus4);
+        hmap.put("E sus2", R.drawable.e_sus2);
+        hmap.put("E 7sus4", R.drawable.e_7sus4);
+        hmap.put("E 7sus2", R.drawable.e_7sus2);
+
         /* CHORD : F */
+        hmap.put("F maj", R.drawable.f_maj);
+        hmap.put("F min", R.drawable.f_min);
+        hmap.put("F aug", R.drawable.f_aug);
+        hmap.put("F dim", R.drawable.f_dim);
+        hmap.put("F dom7", R.drawable.f_dom7);
+        hmap.put("F maj7", R.drawable.f_maj7);
+        hmap.put("F min7", R.drawable.f_min7);
+        hmap.put("F aug7", R.drawable.f_aug7);
+        hmap.put("F dim7", R.drawable.f_dim7);
+        hmap.put("F add9", R.drawable.f_add9);
+        hmap.put("F madd9", R.drawable.f_madd9);
+        hmap.put("F 6", R.drawable.f_6);
+        hmap.put("F min6", R.drawable.f_min6);
+        hmap.put("F 5", R.drawable.f_5);
+        hmap.put("F dom9", R.drawable.f_dom9);
+        hmap.put("F maj9", R.drawable.f_maj9);
+        hmap.put("F min9", R.drawable.f_min9);
+        hmap.put("F dom13", R.drawable.f_dom13);
+        hmap.put("F sus4", R.drawable.f_sus4);
+        hmap.put("F sus2", R.drawable.f_sus2);
+        hmap.put("F 7sus4", R.drawable.f_7sus4);
+        hmap.put("F 7sus2", R.drawable.f_7sus2);
+
         /* CHORD : F# */
+        hmap.put("F# maj", R.drawable.fshp_maj);
+        hmap.put("F# min", R.drawable.fshp_min);
+        hmap.put("F# aug", R.drawable.fshp_aug);
+        hmap.put("F# dim", R.drawable.fshp_dim);
+        hmap.put("F# dom7", R.drawable.fshp_dom7);
+        hmap.put("F# maj7", R.drawable.fshp_maj7);
+        hmap.put("F# min7", R.drawable.fshp_min7);
+        hmap.put("F# aug7", R.drawable.fshp_aug7);
+        hmap.put("F# dim7", R.drawable.fshp_dim7);
+        hmap.put("F# add9", R.drawable.fshp_add9);
+        hmap.put("F# madd9", R.drawable.fshp_madd9);
+        hmap.put("F# 6", R.drawable.fshp_6);
+        hmap.put("F# min6", R.drawable.fshp_min6);
+        hmap.put("F# 5", R.drawable.fshp_5);
+        hmap.put("F# dom9", R.drawable.fshp_dom9);
+        hmap.put("F# maj9", R.drawable.fshp_maj9);
+        hmap.put("F# min9", R.drawable.fshp_min9);
+        hmap.put("F# dom13", R.drawable.fshp_dom13);
+        hmap.put("F# sus4", R.drawable.fshp_sus4);
+        hmap.put("F# sus2", R.drawable.fshp_sus2);
+        hmap.put("F# 7sus4", R.drawable.fshp_7sus4);
+        hmap.put("F# 7sus2", R.drawable.fshp_7sus2);
+
         /* CHORD : G */
+        // G5 islast chord. start from there
+        hmap.put("G maj", R.drawable.g_maj);
+        hmap.put("G min", R.drawable.g_min);
+        hmap.put("G aug", R.drawable.g_aug);
+        hmap.put("G dim", R.drawable.g_dim);
+        hmap.put("G dom7", R.drawable.g_dom7);
+        hmap.put("G maj7", R.drawable.g_maj7);
+        hmap.put("G min7", R.drawable.g_min7);
+        hmap.put("G aug7", R.drawable.g_aug7);
+        hmap.put("G dim7", R.drawable.g_dim7);
+        hmap.put("G add9", R.drawable.g_add9);
+        hmap.put("G madd9", R.drawable.g_madd9);
+        hmap.put("G 6", R.drawable.g_6);
+        hmap.put("G min6", R.drawable.g_min6);
+        hmap.put("G 5", R.drawable.g_5);
+
         /* CHORD : G# */
 
 

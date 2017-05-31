@@ -37,6 +37,10 @@
             android:label="@string/category_selected_chord" />
 
         <activity
+            android:name=".TunerActivity"
+            android:label="@string/category_ukulele_tuner" />
+
+        <activity
             android:name=".AboutActivity"
             android:label="@string/category_about" />
 

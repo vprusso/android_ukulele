@@ -16,8 +16,8 @@ public class UkuleleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ukulele_list_notes);
 
-        final String[] ukulele_notes = {"C", "C#", "D#", "D", "Eb", "E", "F", "F#",
-                                        "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"};
+        final String[] ukulele_notes = {"A", "A#", "B", "C", "C#", "D", "D#", "E",
+                                        "F", "F#", "G", "G#"};
 
         ListAdapter ukuleleAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,

@@ -23,4 +23,8 @@
     <string name="category_chord">Chord</string>
     <string name="category_selected_chord">Selected Chord</string>
 
+
+    <string name="tuner_ukulele_header">Ukulele Tuner</string>
+
+
 </resources>

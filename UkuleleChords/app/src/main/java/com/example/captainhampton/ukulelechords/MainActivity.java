@@ -16,10 +16,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         displayBannerAd();
 
-        // Start the ukulele as selected instrument.
+        // Select the ukulele chord activity
         TextView ukuleleTextView = (TextView) findViewById(R.id.ukuleleTextView);
         ukuleleTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +28,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //
+        // Start the ukulele scales activity
+        // TODO
+
+        // Start the ukulele tuner activity
+        TextView ukuleleTunerTextView = (TextView) findViewById(R.id.ukuleleTunerTextView);
+        ukuleleTunerTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent tunerIntent = new Intent(MainActivity.this, TunerActivity.class);
+                startActivity(tunerIntent);
+            }
+        });
+
+        // Start the ukulele chord sequencer activity
+        // TODO
+
+        // Start the about activity.
         TextView aboutTextView = (TextView) findViewById(R.id.aboutTextView);
         aboutTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayBannerAd() {
-        AdView adView = (AdView)findViewById(R.id.adView);
+        AdView adView = (AdView)findViewById(R.id.mainAdView);
         AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
 
         adView.loadAd(adRequest);

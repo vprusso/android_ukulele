@@ -13,6 +13,7 @@ public class AboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
+        displayBannerAd();
 
         TextView aboutText = (TextView) findViewById(R.id.aboutTextView);
 
@@ -20,5 +21,12 @@ public class AboutActivity extends AppCompatActivity {
                 "for kicks on the weekends, and it's been a really fun project to work on!" +
                 "I built this mostl ikely for the same reason you downloaded it, to learn the" +
                 "ukulele! Hopefully this humble little app can help you in achieving this goal!");
+    }
+
+    public void displayBannerAd() {
+        AdView adView = (AdView)findViewById(R.id.aboutAdView);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
+
+        adView.loadAd(adRequest);
     }
 }
