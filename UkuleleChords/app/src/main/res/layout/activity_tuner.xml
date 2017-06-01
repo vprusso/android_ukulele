@@ -1,26 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gallery"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tuningTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/tuner_ukulele_header"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Spinner
+            android:id="@+id/spinnerUkuleleTunings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tuningTextView" />
+
+        <Button
+            android:id="@+id/buttonTopString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/spinnerUkuleleTunings"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textAppearance="@android:style/TextAppearance.Large" />
+
+        <Button
+            android:id="@+id/buttonMiddleTopString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerUkuleleTunings"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="150dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textAppearance="@android:style/TextAppearance.Large" />
+
+        <Button
+            android:id="@+id/buttonMiddleBottomString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerUkuleleTunings"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="250dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textAppearance="@android:style/TextAppearance.Large" />
+
+        <Button
+            android:id="@+id/buttonBottomString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerUkuleleTunings"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="350dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textAppearance="@android:style/TextAppearance.Large" />
+
+        <TextView
+            android:id="@+id/textViewTopString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tuner_top_string"
+            android:textSize="20sp"
+            android:layout_alignBaseline="@+id/buttonTopString"
+            android:layout_alignBottom="@+id/buttonTopString"
+            android:layout_alignLeft="@+id/textViewBottomString"
+            android:layout_alignStart="@+id/textViewBottomString" />
+
+        <TextView
+            android:id="@+id/textViewMiddleTopString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tuner_middle_top_string"
+            android:textSize="20sp"
+            android:layout_alignBaseline="@+id/buttonMiddleTopString"
+            android:layout_alignBottom="@+id/buttonMiddleTopString"
+            android:layout_alignLeft="@+id/textViewMiddleBottomString"
+            android:layout_alignStart="@+id/textViewMiddleBottomString" />
+
+        <TextView
+            android:id="@+id/textViewMiddleBottomString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tuner_middle_bottom_string"
+            android:textSize="20sp"
+            android:layout_alignBaseline="@+id/buttonMiddleBottomString"
+            android:layout_alignBottom="@+id/buttonMiddleBottomString"
+            android:layout_alignLeft="@+id/textViewTopString"
+            android:layout_alignStart="@+id/textViewTopString" />
+
+        <TextView
+            android:id="@+id/textViewBottomString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tuner_bottom_string"
+            android:textSize="20sp"
+            android:layout_alignBaseline="@+id/buttonBottomString"
+            android:layout_alignBottom="@+id/buttonBottomString"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
 
-    <TextView
-        android:id="@+id/tunerHeaderTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_marginRight="20dp"
-        android:text="@string/tuner_ukulele_header" />
+    </RelativeLayout>
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tunerHeaderTextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
-</RelativeLayout>
+</LinearLayout>
 
 

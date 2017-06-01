@@ -25,6 +25,10 @@
 
 
     <string name="tuner_ukulele_header">Ukulele Tuner</string>
+    <string name="tuner_top_string">Top String (4th String)</string>
+    <string name="tuner_middle_top_string">3rd String</string>
+    <string name="tuner_middle_bottom_string">2nd String</string>
+    <string name="tuner_bottom_string">Bottom String (1st String)</string>
 
 
 </resources>
