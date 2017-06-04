@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         displayBannerAd();
 
         // Select the ukulele chord activity
-        TextView ukuleleTextView = (TextView) findViewById(R.id.ukuleleTextView);
-        ukuleleTextView.setOnClickListener(new View.OnClickListener() {
+        TextView textViewUkulele = (TextView) findViewById(R.id.ukuleleTextView);
+        textViewUkulele.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent ukuleleIntent = new Intent(MainActivity.this, UkuleleActivity.class);
@@ -28,12 +28,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Start the ukulele scales activity
-        // TODO
-
         // Start the ukulele tuner activity
-        TextView ukuleleTunerTextView = (TextView) findViewById(R.id.ukuleleTunerTextView);
-        ukuleleTunerTextView.setOnClickListener(new View.OnClickListener() {
+        TextView textViewUkuleleTuner = (TextView) findViewById(R.id.ukuleleTunerTextView);
+        textViewUkuleleTuner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent tunerIntent = new Intent(MainActivity.this, TunerActivity.class);
@@ -41,8 +38,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Start the scales activity
+        TextView textViewScales = (TextView) findViewById(R.id.ukuleleScalesTextView);
+        textViewScales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent scalesIntent = new Intent(MainActivity.this, ScalesActivity.class);
+                startActivity(scalesIntent);
+            }
+        });
+
         // Start the ukulele chord sequencer activity
-        // TODO
+        TextView textViewSequencer = (TextView) findViewById(R.id.ukuleleChordSequencerTextView);
+        textViewSequencer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sequencerIntent = new Intent(MainActivity.this, SequencerActivity.class);
+                startActivity(sequencerIntent);
+            }
+        });
+
 
         // Start the about activity.
         TextView aboutTextView = (TextView) findViewById(R.id.aboutTextView);

@@ -248,7 +248,6 @@ public class UkuleleChordUtil {
         hmap.put("F# 7sus2", R.drawable.fshp_7sus2);
 
         /* CHORD : G */
-        // G5 islast chord. start from there
         hmap.put("G maj", R.drawable.g_maj);
         hmap.put("G min", R.drawable.g_min);
         hmap.put("G aug", R.drawable.g_aug);
@@ -263,8 +262,38 @@ public class UkuleleChordUtil {
         hmap.put("G 6", R.drawable.g_6);
         hmap.put("G min6", R.drawable.g_min6);
         hmap.put("G 5", R.drawable.g_5);
+        hmap.put("G dom9", R.drawable.g_dom9);
+        hmap.put("G maj9", R.drawable.g_maj9);
+        hmap.put("G min9", R.drawable.g_min9);
+        hmap.put("G dom13", R.drawable.g_dom13);
+        hmap.put("G sus4", R.drawable.g_sus4);
+        hmap.put("G sus2", R.drawable.g_sus2);
+        hmap.put("G 7sus4", R.drawable.g_7sus4);
+        hmap.put("G 7sus2", R.drawable.g_7sus2);
 
         /* CHORD : G# */
+        hmap.put("G# maj", R.drawable.gshp_maj);
+        hmap.put("G# min", R.drawable.gshp_min);
+        hmap.put("G# aug", R.drawable.gshp_aug);
+        hmap.put("G# dim", R.drawable.gshp_dim);
+        hmap.put("G# dom7", R.drawable.gshp_dom7);
+        hmap.put("G# maj7", R.drawable.gshp_maj7);
+        hmap.put("G# min7", R.drawable.gshp_min7);
+        hmap.put("G# aug7", R.drawable.gshp_aug7);
+        hmap.put("G# dim7", R.drawable.gshp_dim7);
+        hmap.put("G# add9", R.drawable.gshp_add9);
+        hmap.put("G# madd9", R.drawable.gshp_madd9);
+        hmap.put("G# 6", R.drawable.gshp_6);
+        hmap.put("G# min6", R.drawable.gshp_min6);
+        hmap.put("G# 5", R.drawable.gshp_5);
+        hmap.put("G# dom9", R.drawable.gshp_dom9);
+        hmap.put("G# maj9", R.drawable.gshp_maj9);
+        hmap.put("G# min9", R.drawable.gshp_min9);
+        hmap.put("G# dom13", R.drawable.gshp_dom13);
+        hmap.put("G# sus4", R.drawable.gshp_sus4);
+        hmap.put("G# sus2", R.drawable.gshp_sus2);
+        hmap.put("G# 7sus4", R.drawable.gshp_7sus4);
+        hmap.put("G# 7sus2", R.drawable.gshp_7sus2);
 
 
         return hmap;

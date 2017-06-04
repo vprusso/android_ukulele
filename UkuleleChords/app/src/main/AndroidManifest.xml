@@ -41,6 +41,14 @@
             android:label="@string/category_ukulele_tuner" />
 
         <activity
+            android:name=".ScalesActivity"
+            android:label="@string/category_ukulele_scales" />
+
+        <activity
+            android:name=".SequencerActivity"
+            android:label="@string/category_ukulele_chord_sequencer" />
+
+        <activity
             android:name=".AboutActivity"
             android:label="@string/category_about" />
 
