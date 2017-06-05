@@ -65,10 +65,10 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                 buttonMiddleTopString.setText("C");
                 buttonMiddleBottomString.setText("E");
                 buttonBottomString.setText("A");
-                final MediaPlayer standardTopString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer standardMiddleTopString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer standardMiddleBottomString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer standardBottomString = MediaPlayer.create(this, R.raw.a_aug);
+                final MediaPlayer standardTopString = MediaPlayer.create(this, R.raw.note_g);
+                final MediaPlayer standardMiddleTopString = MediaPlayer.create(this, R.raw.note_c);
+                final MediaPlayer standardMiddleBottomString = MediaPlayer.create(this, R.raw.note_e);
+                final MediaPlayer standardBottomString = MediaPlayer.create(this, R.raw.note_a);
 
                 buttonTopString.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -248,7 +248,7 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
         setTuning(selected_tuning);
 
         // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Selected: " + selected_tuning, Toast.LENGTH_LONG).show();
+        //Toast.makeText(parent.getContext(), "Selected: " + selected_tuning, Toast.LENGTH_LONG).show();
     }
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
