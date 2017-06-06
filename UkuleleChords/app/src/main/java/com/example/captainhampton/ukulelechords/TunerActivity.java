@@ -24,6 +24,8 @@ import java.util.List;
 
 public class TunerActivity extends Activity implements OnItemSelectedListener {
 
+    private MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,11 +55,40 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
         spinnerUkuleleTunings.setAdapter(dataAdapter);
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (mediaPlayer != null) {
+            mediaPlayer.pause();
+            if (isFinishing()) {
+                mediaPlayer.stop();
+                mediaPlayer.release();
+            }
+        }
+    }
+
+    private void stopPlaying() {
+        if (mediaPlayer != null) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
     public void setTuning(String selected_tuning) {
         Button buttonTopString = (Button) findViewById(R.id.buttonTopString);
         Button buttonMiddleTopString = (Button) findViewById(R.id.buttonMiddleTopString);
         Button buttonMiddleBottomString = (Button) findViewById(R.id.buttonMiddleBottomString);
         Button buttonBottomString = (Button) findViewById(R.id.buttonBottomString);
+
+        Button buttonStopNote = (Button) findViewById(R.id.buttonStopNote);
+
+        buttonStopNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stopPlaying();
+            }
+        });
 
         switch (selected_tuning) {
             case "Standard Tuning":
@@ -65,33 +96,37 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                 buttonMiddleTopString.setText("C");
                 buttonMiddleBottomString.setText("E");
                 buttonBottomString.setText("A");
-                final MediaPlayer standardTopString = MediaPlayer.create(this, R.raw.note_g);
-                final MediaPlayer standardMiddleTopString = MediaPlayer.create(this, R.raw.note_c);
-                final MediaPlayer standardMiddleBottomString = MediaPlayer.create(this, R.raw.note_e);
-                final MediaPlayer standardBottomString = MediaPlayer.create(this, R.raw.note_a);
 
                 buttonTopString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        standardTopString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonMiddleTopString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        standardMiddleTopString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_c);
+                        mediaPlayer.start();
                     }
                 });
                 buttonMiddleBottomString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        standardMiddleBottomString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_e);
+                        mediaPlayer.start();
                     }
                 });
                 buttonBottomString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        standardBottomString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_a);
+                        mediaPlayer.start();
                     }
                 });
 
@@ -102,33 +137,37 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                 buttonMiddleTopString.setText("G");
                 buttonMiddleBottomString.setText("B");
                 buttonBottomString.setText("E");
-                final MediaPlayer baritoneTopString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer baritoneMiddleTopString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer baritoneMiddleBottomString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer baritoneBottomString = MediaPlayer.create(this, R.raw.a_aug);
 
                 buttonTopString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        baritoneTopString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonMiddleTopString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        baritoneMiddleTopString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonMiddleBottomString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        baritoneMiddleBottomString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonBottomString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        baritoneBottomString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 break;
@@ -137,33 +176,37 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                 buttonMiddleTopString.setText("C");
                 buttonMiddleBottomString.setText("E");
                 buttonBottomString.setText("G");
-                final MediaPlayer slackTopString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer slackMiddleTopString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer slackMiddleBottomString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer slackBottomString = MediaPlayer.create(this, R.raw.a_aug);
 
                 buttonTopString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        slackTopString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonMiddleTopString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        slackMiddleTopString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonMiddleBottomString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        slackMiddleBottomString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonBottomString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        slackBottomString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 break;
@@ -172,33 +215,37 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                 buttonMiddleTopString.setText("D");
                 buttonMiddleBottomString.setText("F#");
                 buttonBottomString.setText("B");
-                final MediaPlayer englishTopString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer englishMiddleTopString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer englishMiddleBottomString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer englishBottomString = MediaPlayer.create(this, R.raw.a_aug);
 
                 buttonTopString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        englishTopString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonMiddleTopString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        englishMiddleTopString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonMiddleBottomString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        englishMiddleBottomString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonBottomString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        englishBottomString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 break;
@@ -207,33 +254,37 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                 buttonMiddleTopString.setText("D");
                 buttonMiddleBottomString.setText("F#");
                 buttonBottomString.setText("B");
-                final MediaPlayer canadianTopString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer canadianMiddleTopString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer canadianMiddleBottomString = MediaPlayer.create(this, R.raw.a_aug);
-                final MediaPlayer canadianBottomString = MediaPlayer.create(this, R.raw.a_aug);
 
                 buttonTopString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        canadianTopString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonMiddleTopString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        canadianMiddleTopString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonMiddleBottomString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        canadianMiddleBottomString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 buttonBottomString.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        canadianBottomString.start();
+                        stopPlaying();
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer.start();
                     }
                 });
                 break;

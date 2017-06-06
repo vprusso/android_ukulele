@@ -80,45 +80,55 @@
             android:id="@+id/textViewTopString"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tuner_top_string"
-            android:textSize="20sp"
             android:layout_alignBaseline="@+id/buttonTopString"
             android:layout_alignBottom="@+id/buttonTopString"
             android:layout_alignLeft="@+id/textViewBottomString"
-            android:layout_alignStart="@+id/textViewBottomString" />
+            android:layout_alignStart="@+id/textViewBottomString"
+            android:text="@string/tuner_top_string"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textViewMiddleTopString"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tuner_middle_top_string"
-            android:textSize="20sp"
             android:layout_alignBaseline="@+id/buttonMiddleTopString"
             android:layout_alignBottom="@+id/buttonMiddleTopString"
             android:layout_alignLeft="@+id/textViewMiddleBottomString"
-            android:layout_alignStart="@+id/textViewMiddleBottomString" />
+            android:layout_alignStart="@+id/textViewMiddleBottomString"
+            android:text="@string/tuner_middle_top_string"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textViewMiddleBottomString"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tuner_middle_bottom_string"
-            android:textSize="20sp"
             android:layout_alignBaseline="@+id/buttonMiddleBottomString"
             android:layout_alignBottom="@+id/buttonMiddleBottomString"
             android:layout_alignLeft="@+id/textViewTopString"
-            android:layout_alignStart="@+id/textViewTopString" />
+            android:layout_alignStart="@+id/textViewTopString"
+            android:text="@string/tuner_middle_bottom_string"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textViewBottomString"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tuner_bottom_string"
-            android:textSize="20sp"
             android:layout_alignBaseline="@+id/buttonBottomString"
             android:layout_alignBottom="@+id/buttonBottomString"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:text="@string/tuner_bottom_string"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonStopNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="11dp"
+            android:text="@string/tuner_stop_note" />
 
 
     </RelativeLayout>

@@ -14,19 +14,37 @@ import java.util.HashMap;
 
 public class UkuleleSelectedChordAdapter extends ArrayAdapter<String>{
 
+    private MediaPlayer selectedChordSound;
+
+    private UkuleleChordUtil ukuleleChordUtil = new UkuleleChordUtil();
+    private HashMap<String, Integer> chordDrawableHashMap = ukuleleChordUtil.getSelectedChordDrawableHashMap();
+    private HashMap<String, Integer> chordRawHashMap = ukuleleChordUtil.getSelectedChordRawHashMap();
 
     public UkuleleSelectedChordAdapter(Context context, String[] guitar_chord) {
         super(context, R.layout.ukulele_selected_chord_row, guitar_chord);
     }
 
-    public void setSelectedChordImageButton(final String selectedChord, final MediaPlayer selectedChordSound, ImageButton selectedChordImageButton) {
+
+    private void stopPlaying() {
+        if (selectedChordSound != null) {
+            selectedChordSound.stop();
+            selectedChordSound.release();
+            selectedChordSound = null;
+        }
+    }
+
+    public void setSelectedChordImageButton(final String selectedChord, ImageButton selectedChordImageButton) {
         selectedChordImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                //selected = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                selectedChordSound = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), chordRawHashMap.get(selectedChord));
                 selectedChordSound.start();
             }
         });
     }
+
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -40,14 +58,11 @@ public class UkuleleSelectedChordAdapter extends ArrayAdapter<String>{
 
         selectedChordTextView.setText(selectedChord);
 
-        UkuleleChordUtil ukuleleChordUtil = new UkuleleChordUtil();
-        HashMap<String, Integer> chordDrawableHashMap = ukuleleChordUtil.getSelectedChordDrawableHashMap();
-        HashMap<String, Integer> chordRawHashMap = ukuleleChordUtil.getSelectedChordRawHashMap();
-
         selectedChordDiagramImageView.setImageResource(chordDrawableHashMap.get(selectedChord));
-        final MediaPlayer selectedChordSound = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), chordRawHashMap.get(selectedChord));
+        //final MediaPlayer selectedChordSound = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), chordRawHashMap.get(selectedChord));
 
-        setSelectedChordImageButton(selectedChord, selectedChordSound, selectedChordImageButton);
+
+        setSelectedChordImageButton(selectedChord, selectedChordImageButton);
 
 
         return selectedChordView;

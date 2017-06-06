@@ -29,6 +29,7 @@
     <string name="tuner_middle_top_string">3rd String</string>
     <string name="tuner_middle_bottom_string">2nd String</string>
     <string name="tuner_bottom_string">Bottom String (1st String)</string>
+    <string name="tuner_stop_note">Stop</string>
 
 
 </resources>

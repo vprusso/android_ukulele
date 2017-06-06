@@ -1,5 +1,6 @@
 package com.example.captainhampton.ukulelechords;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListAdapter;
@@ -22,4 +23,5 @@ public class UkuleleSelectedChordActivity extends AppCompatActivity {
         final String[] ukulele_chords = { ukulele_chord };
         ukuleleSelectedChordViewTransition(ukulele_chords);
     }
+
 }
