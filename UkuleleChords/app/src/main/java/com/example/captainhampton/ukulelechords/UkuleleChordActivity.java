@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class UkuleleChordActivity extends AppCompatActivity {
 
+    private UkuleleChordUtil ukuleleChordUtil = new UkuleleChordUtil();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +22,7 @@ public class UkuleleChordActivity extends AppCompatActivity {
         String ukulele_note = getIntent().getStringExtra("UKULELE_NOTE_ID");
         Toast.makeText(UkuleleChordActivity.this, ukulele_note, Toast.LENGTH_LONG).show();
 
-        final String[] ukulele_chords = createUkuleleChords(ukulele_note);
+        final String[] ukulele_chords = ukuleleChordUtil.createUkuleleChords(ukulele_note);
         ukuleleChordViewTransition(ukulele_chords);
 
     }
@@ -42,20 +44,6 @@ public class UkuleleChordActivity extends AppCompatActivity {
                     }
                 }
         );
-    }
-
-    public String[] createUkuleleChords(String ukulele_note) {
-        final String[] chord_types = {"maj", "min", "aug", "dim", "dom7", "maj7", "min7",
-                "aug7", "dim7", "add9", "madd9", "6", "min6", "5",
-                "dom9", "maj9", "min9", "dom13", "sus4", "sus2",
-                "7sus4", "7sus2"};
-
-        String[] ukulele_chords = new String[chord_types.length];
-        for (int i = 0; i < chord_types.length; i++) {
-            ukulele_chords[i] = ukulele_note + " " + chord_types[i];
-       }
-        return ukulele_chords;
-
     }
 
 }
