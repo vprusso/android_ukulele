@@ -41,8 +41,6 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
         List<String> categories = new ArrayList<String>();
         categories.add("Standard Tuning");
         categories.add("Baritone Tuning");
-        categories.add("Slack-key Tuning");
-        categories.add("English Tuning");
         categories.add("Canadian Tuning");
 
         // Creating adapter for spinner
@@ -142,7 +140,7 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                     @Override
                     public void onClick(View v) {
                         stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_baritone_d);
                         mediaPlayer.start();
                     }
                 });
@@ -150,7 +148,7 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                     @Override
                     public void onClick(View v) {
                         stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_baritone_g);
                         mediaPlayer.start();
                     }
                 });
@@ -158,7 +156,7 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                     @Override
                     public void onClick(View v) {
                         stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_baritone_b);
                         mediaPlayer.start();
                     }
                 });
@@ -166,85 +164,7 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                     @Override
                     public void onClick(View v) {
                         stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
-                        mediaPlayer.start();
-                    }
-                });
-                break;
-            case "Slack-key Tuning":
-                buttonTopString.setText("G");
-                buttonMiddleTopString.setText("C");
-                buttonMiddleBottomString.setText("E");
-                buttonBottomString.setText("G");
-
-                buttonTopString.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
-                        mediaPlayer.start();
-                    }
-                });
-                buttonMiddleTopString.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
-                        mediaPlayer.start();
-                    }
-                });
-                buttonMiddleBottomString.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
-                        mediaPlayer.start();
-                    }
-                });
-                buttonBottomString.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
-                        mediaPlayer.start();
-                    }
-                });
-                break;
-            case "English Tuning":
-                buttonTopString.setText("A");
-                buttonMiddleTopString.setText("D");
-                buttonMiddleBottomString.setText("F#");
-                buttonBottomString.setText("B");
-
-                buttonTopString.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
-                        mediaPlayer.start();
-                    }
-                });
-                buttonMiddleTopString.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
-                        mediaPlayer.start();
-                    }
-                });
-                buttonMiddleBottomString.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
-                        mediaPlayer.start();
-                    }
-                });
-                buttonBottomString.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_baritone_e);
                         mediaPlayer.start();
                     }
                 });
@@ -259,7 +179,7 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                     @Override
                     public void onClick(View v) {
                         stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_canadian_a);
                         mediaPlayer.start();
                     }
                 });
@@ -267,7 +187,7 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                     @Override
                     public void onClick(View v) {
                         stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_canadian_d);
                         mediaPlayer.start();
                     }
                 });
@@ -275,7 +195,7 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                     @Override
                     public void onClick(View v) {
                         stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_canadian_fshp);
                         mediaPlayer.start();
                     }
                 });
@@ -283,7 +203,7 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
                     @Override
                     public void onClick(View v) {
                         stopPlaying();
-                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
+                        mediaPlayer = MediaPlayer.create(TunerActivity.this, R.raw.note_canadian_b);
                         mediaPlayer.start();
                     }
                 });

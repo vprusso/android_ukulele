@@ -18,11 +18,11 @@
             android:background="@color/category_ukulele"
             android:text="@string/category_ukulele" />
 
-        <TextView
-            android:id="@+id/ukuleleScalesTextView"
-            style="@style/CategoryStyle"
-            android:background="@color/category_ukulele_scales"
-            android:text="@string/category_ukulele_scales" />
+        <!--<TextView-->
+            <!--android:id="@+id/ukuleleScalesTextView"-->
+            <!--style="@style/CategoryStyle"-->
+            <!--android:background="@color/category_ukulele_scales"-->
+            <!--android:text="@string/category_ukulele_scales" />-->
 
         <TextView
             android:id="@+id/ukuleleTunerTextView"

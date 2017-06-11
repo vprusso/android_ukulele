@@ -38,15 +38,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Start the scales activity
-        TextView textViewScales = (TextView) findViewById(R.id.ukuleleScalesTextView);
-        textViewScales.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent scalesIntent = new Intent(MainActivity.this, ScalesActivity.class);
-                startActivity(scalesIntent);
-            }
-        });
+//        // Start the scales activity
+//        TextView textViewScales = (TextView) findViewById(R.id.ukuleleScalesTextView);
+//        textViewScales.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent scalesIntent = new Intent(MainActivity.this, ScalesActivity.class);
+//                startActivity(scalesIntent);
+//            }
+//        });
 
         // Start the ukulele chord sequencer activity
         TextView textViewSequencer = (TextView) findViewById(R.id.ukuleleChordSequencerTextView);
