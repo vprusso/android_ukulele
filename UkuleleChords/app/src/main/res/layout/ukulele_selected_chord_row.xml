@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
 
     <TextView
         android:id="@+id/selectedUkuleleChordTextView"
+        style="@style/CategoryStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
 
     <ImageView
         android:id="@+id/selectedChordDiagramImageView"
+        style="@style/CategoryStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/a_maj" />
 
     <ImageButton
         android:id="@+id/playChordImageButton"
+        style="@style/CategoryStyle"
+        android:background="@drawable/gradient_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_play_arrow" />

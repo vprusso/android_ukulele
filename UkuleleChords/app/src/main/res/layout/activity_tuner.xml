@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/gallery"
+    android:background="@drawable/gradient_background"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
@@ -11,6 +12,7 @@
 
         <TextView
             android:id="@+id/tuningTextView"
+            style="@style/CategoryStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -20,6 +22,8 @@
 
         <Spinner
             android:id="@+id/spinnerUkuleleTunings"
+            style="@style/CategoryStyle"
+            android:background="@drawable/gradient_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -28,6 +32,9 @@
 
         <Button
             android:id="@+id/buttonTopString"
+            style="@style/CategoryStyle"
+            android:background="@drawable/gradient_background"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -42,6 +49,9 @@
 
         <Button
             android:id="@+id/buttonMiddleTopString"
+            style="@style/CategoryStyle"
+            android:background="@drawable/gradient_background"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/spinnerUkuleleTunings"
@@ -54,6 +64,9 @@
 
         <Button
             android:id="@+id/buttonMiddleBottomString"
+            style="@style/CategoryStyle"
+            android:background="@drawable/gradient_background"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/spinnerUkuleleTunings"
@@ -66,6 +79,9 @@
 
         <Button
             android:id="@+id/buttonBottomString"
+            style="@style/CategoryStyle"
+            android:background="@drawable/gradient_background"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/spinnerUkuleleTunings"
@@ -78,6 +94,7 @@
 
         <TextView
             android:id="@+id/textViewTopString"
+            style="@style/CategoryStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/buttonTopString"
@@ -89,6 +106,7 @@
 
         <TextView
             android:id="@+id/textViewMiddleTopString"
+            style="@style/CategoryStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/buttonMiddleTopString"
@@ -100,6 +118,7 @@
 
         <TextView
             android:id="@+id/textViewMiddleBottomString"
+            style="@style/CategoryStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/buttonMiddleBottomString"
@@ -111,6 +130,7 @@
 
         <TextView
             android:id="@+id/textViewBottomString"
+            style="@style/CategoryStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/buttonBottomString"
@@ -122,6 +142,9 @@
 
         <Button
             android:id="@+id/buttonStopNote"
+            style="@style/CategoryStyle"
+            android:gravity="center"
+            android:background="@drawable/gradient_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

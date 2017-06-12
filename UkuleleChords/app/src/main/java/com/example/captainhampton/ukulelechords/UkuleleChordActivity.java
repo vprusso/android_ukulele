@@ -20,7 +20,7 @@ public class UkuleleChordActivity extends AppCompatActivity {
         setContentView(R.layout.ukulele_list_chords);
 
         String ukulele_note = getIntent().getStringExtra("UKULELE_NOTE_ID");
-        Toast.makeText(UkuleleChordActivity.this, ukulele_note, Toast.LENGTH_LONG).show();
+        //Toast.makeText(UkuleleChordActivity.this, ukulele_note, Toast.LENGTH_LONG).show();
 
         final String[] ukulele_chords = ukuleleChordUtil.createUkuleleChords(ukulele_note);
         ukuleleChordViewTransition(ukulele_chords);

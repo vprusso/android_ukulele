@@ -60,7 +60,9 @@ public class UkuleleSelectedChordAdapter extends ArrayAdapter<String>{
         ImageView selectedChordDiagramImageView = (ImageView) selectedChordView.findViewById(R.id.selectedChordDiagramImageView);
         ImageButton selectedChordImageButton = (ImageButton) selectedChordView.findViewById(R.id.playChordImageButton);
 
-        selectedChordTextView.setText(selectedChord);
+        final String verboseSelectedChord = ukuleleChordUtil.getVerboseChord(selectedChord);
+        selectedChordTextView.setText(verboseSelectedChord);
+        //selectedChordTextView.setText(selectedChord);
 
         selectedChordDiagramImageView.setImageResource(chordDrawableHashMap.get(selectedChord));
 

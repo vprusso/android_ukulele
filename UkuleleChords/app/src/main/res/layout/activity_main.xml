@@ -9,13 +9,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/tan_background"
+        android:background="@drawable/gradient_background"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/ukuleleTextView"
             style="@style/CategoryStyle"
-            android:background="@color/category_ukulele"
+            android:background="@drawable/gradient_background"
+            android:layout_marginTop="30dp"
             android:text="@string/category_ukulele" />
 
         <!--<TextView-->
@@ -27,19 +28,22 @@
         <TextView
             android:id="@+id/ukuleleTunerTextView"
             style="@style/CategoryStyle"
-            android:background="@color/category_ukulele_tuner"
+            android:background="@drawable/gradient_background"
+            android:layout_marginTop="30dp"
             android:text="@string/category_ukulele_tuner" />
 
         <TextView
             android:id="@+id/ukuleleChordSequencerTextView"
             style="@style/CategoryStyle"
-            android:background="@color/category_ukulele_chord_sequencer"
+            android:background="@drawable/gradient_background"
+            android:layout_marginTop="30dp"
             android:text="@string/category_ukulele_chord_sequencer" />
 
         <TextView
             android:id="@+id/aboutTextView"
             style="@style/CategoryStyle"
-            android:background="@color/category_about"
+            android:background="@drawable/gradient_background"
+            android:layout_marginTop="30dp"
             android:text="@string/category_about" />
 
     </LinearLayout>
