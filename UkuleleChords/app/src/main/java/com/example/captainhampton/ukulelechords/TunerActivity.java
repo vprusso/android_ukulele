@@ -1,8 +1,10 @@
 package com.example.captainhampton.ukulelechords;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v4.widget.TextViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +20,8 @@ import android.widget.AdapterView.OnItemSelectedListener;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -44,7 +48,7 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
         categories.add("Canadian Tuning");
 
         // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.spinner_item, categories);
 
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -217,6 +221,9 @@ public class TunerActivity extends Activity implements OnItemSelectedListener {
         // On selecting a spinner item
         String selected_tuning = parent.getItemAtPosition(position).toString();
         setTuning(selected_tuning);
+        //((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
+        //((TextView) parent.getChildAt(0)).setTextSize(15);
+
 
         // Showing selected spinner item
         //Toast.makeText(parent.getContext(), "Selected: " + selected_tuning, Toast.LENGTH_LONG).show();

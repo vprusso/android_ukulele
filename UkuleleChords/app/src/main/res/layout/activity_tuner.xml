@@ -24,6 +24,7 @@
             android:id="@+id/spinnerUkuleleTunings"
             style="@style/CategoryStyle"
             android:background="@drawable/gradient_background"
+            android:popupBackground="@drawable/gradient_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"

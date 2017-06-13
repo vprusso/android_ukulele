@@ -20,7 +20,7 @@ public class UkuleleActivity extends AppCompatActivity {
                                         "F", "F#", "G", "G#"};
 
         ListAdapter ukuleleAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1,
+                R.layout.list_item_1,
                 ukulele_notes);
 
         ListView ukuleleNotesListView = (ListView) findViewById(R.id.ukuleleNotesListView);
