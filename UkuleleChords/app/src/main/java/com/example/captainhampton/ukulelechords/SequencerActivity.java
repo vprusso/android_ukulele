@@ -94,6 +94,15 @@ public class SequencerActivity extends Activity implements AdapterView.OnItemSel
         spinnerNote3.setAdapter(noteAdapter3);
         spinnerNote4.setAdapter(noteAdapter4);
 
+        Button buttonStopNote = (Button) findViewById(R.id.buttonStopNote);
+
+        buttonStopNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stopPlaying();
+            }
+        });
+
         spinnerNote1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
