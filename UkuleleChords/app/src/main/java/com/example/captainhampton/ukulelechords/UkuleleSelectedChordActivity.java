@@ -2,9 +2,7 @@ package com.example.captainhampton.ukulelechords;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 

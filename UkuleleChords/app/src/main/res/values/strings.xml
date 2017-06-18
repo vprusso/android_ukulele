@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Ukulele Trainor</string>
+    <string name="app_name">Ukulele Trainer</string>
 
     <string name="banner_ad">Banner Ad</string>
     <string name="interstitial_ad">Interstitial Ad</string>
 
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id">ca-app-pub-7213376997288299/9186740760</string>
 
     <string name="interstitial_load">Load Interstitial</string>
     <string name="interstitial_not_ready">Interstitial Not Ready</string>
@@ -30,6 +30,7 @@
     <string name="tuner_middle_bottom_string">2nd String</string>
     <string name="tuner_bottom_string">Bottom String (1st String)</string>
     <string name="tuner_stop_note">Stop</string>
+    <string name="tuner_play_note">Play</string>
 
 
 </resources>

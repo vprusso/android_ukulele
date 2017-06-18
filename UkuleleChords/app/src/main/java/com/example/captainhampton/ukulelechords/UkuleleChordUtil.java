@@ -2,7 +2,6 @@ package com.example.captainhampton.ukulelechords;
 
 import java.util.HashMap;
 
-
 public class UkuleleChordUtil {
 
     public String[] createUkuleleChords(String ukulele_note) {

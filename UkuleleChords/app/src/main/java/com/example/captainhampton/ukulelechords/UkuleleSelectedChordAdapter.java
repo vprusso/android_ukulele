@@ -14,8 +14,6 @@ import java.util.HashMap;
 
 public class UkuleleSelectedChordAdapter extends ArrayAdapter<String>{
 
-    //private MediaPlayer selectedChordSound;
-
     private UkuleleChordUtil ukuleleChordUtil = new UkuleleChordUtil();
     private HashMap<String, Integer> chordDrawableHashMap = ukuleleChordUtil.getSelectedChordDrawableHashMap();
     private HashMap<String, Integer> chordRawHashMap = ukuleleChordUtil.getSelectedChordRawHashMap();
@@ -41,9 +39,7 @@ public class UkuleleSelectedChordAdapter extends ArrayAdapter<String>{
             @Override
             public void onClick(View view) {
                 stopPlaying();
-                //selected = MediaPlayer.create(TunerActivity.this, R.raw.note_g);
                 ukuleleSelectedChordActivity.mediaPlayer = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), chordRawHashMap.get(selectedChord));
-                //selectedChordSound = MediaPlayer.create(UkuleleSelectedChordAdapter.this.getContext(), chordRawHashMap.get(selectedChord));
                 ukuleleSelectedChordActivity.mediaPlayer.start();
             }
         });
@@ -62,8 +58,6 @@ public class UkuleleSelectedChordAdapter extends ArrayAdapter<String>{
 
         final String verboseSelectedChord = ukuleleChordUtil.getVerboseChord(selectedChord);
         selectedChordTextView.setText(verboseSelectedChord);
-        //selectedChordTextView.setText(selectedChord);
-
         selectedChordDiagramImageView.setImageResource(chordDrawableHashMap.get(selectedChord));
 
         setSelectedChordImageButton(selectedChord, selectedChordImageButton);

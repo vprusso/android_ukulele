@@ -4,14 +4,15 @@ package com.example.captainhampton.ukulelechords;
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.HashMap;
 
@@ -27,7 +28,13 @@ public class SequencerActivity extends Activity implements AdapterView.OnItemSel
     private String selected_chord1;
     private String selected_chord2;
     private String selected_chord3;
-    private String selected_chord4;
+
+    public void displayBannerAd() {
+        AdView adView = (AdView)findViewById(R.id.sequencerAdView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        adView.loadAd(adRequest);
+    }
 
     @Override
     protected void onPause() {
@@ -56,8 +63,6 @@ public class SequencerActivity extends Activity implements AdapterView.OnItemSel
             selected_chord2 = selected_chord;
         } else if (whichChord == 3) {
             selected_chord3 = selected_chord;
-        } else if (whichChord == 4) {
-            selected_chord4 = selected_chord;
         }
 
     }
@@ -67,32 +72,30 @@ public class SequencerActivity extends Activity implements AdapterView.OnItemSel
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sequencer);
 
+        displayBannerAd();
+
         // Spinner Note elements
         Spinner spinnerNote1 = (Spinner)findViewById(R.id.spinnerNote1);
         Spinner spinnerNote2 = (Spinner)findViewById(R.id.spinnerNote2);
         Spinner spinnerNote3 = (Spinner)findViewById(R.id.spinnerNote3);
-        Spinner spinnerNote4 = (Spinner)findViewById(R.id.spinnerNote4);
 
         // Spinner Drop down elements
         String[] notes = {"A", "A#", "B", "C", "C#", "D", "D#", "E",
                 "F", "F#", "G", "G#"};
 
         // Creating adapter for spinner
-        ArrayAdapter<String> noteAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, notes);
-        ArrayAdapter<String> noteAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, notes);
-        ArrayAdapter<String> noteAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, notes);
-        ArrayAdapter<String> noteAdapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, notes);
+        ArrayAdapter<String> noteAdapter1 = new ArrayAdapter<String>(this, R.layout.spinner_item, notes);
+        ArrayAdapter<String> noteAdapter2 = new ArrayAdapter<String>(this, R.layout.spinner_item, notes);
+        ArrayAdapter<String> noteAdapter3 = new ArrayAdapter<String>(this, R.layout.spinner_item, notes);
 
         // Drop down layout style - list view with radio button
         noteAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         noteAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         noteAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        noteAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinnerNote1.setAdapter(noteAdapter1);
         spinnerNote2.setAdapter(noteAdapter2);
         spinnerNote3.setAdapter(noteAdapter3);
-        spinnerNote4.setAdapter(noteAdapter4);
 
         Button buttonStopNote = (Button) findViewById(R.id.buttonStopNote);
 
@@ -114,7 +117,7 @@ public class SequencerActivity extends Activity implements AdapterView.OnItemSel
 
                 String [] chords = ukuleleChordUtil.createUkuleleChords(selected_tuning);
 
-                ArrayAdapter<String> chordAdapter1 = new ArrayAdapter<String>(SequencerActivity.this, android.R.layout.simple_spinner_item, chords);
+                ArrayAdapter<String> chordAdapter1 = new ArrayAdapter<String>(SequencerActivity.this, R.layout.spinner_item, chords);
 
                 chordAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerChord1.setAdapter(chordAdapter1);
@@ -131,7 +134,6 @@ public class SequencerActivity extends Activity implements AdapterView.OnItemSel
                             public void onClick(View v) {
                                 stopPlaying();
                                 mediaPlayer = MediaPlayer.create(SequencerActivity.this, chordRawHashMap.get(selected_chord1));
-                                //mediaPlayer = MediaPlayer.create(SequencerActivity.this, R.raw.a_6);
                                 mediaPlayer.start();
                             }
                         });
@@ -163,7 +165,7 @@ public class SequencerActivity extends Activity implements AdapterView.OnItemSel
                 final Button buttonPlay2 = (Button)findViewById(R.id.buttonPlay2);
                 String [] chords = ukuleleChordUtil.createUkuleleChords(selected_tuning);
 
-                ArrayAdapter<String> chordAdapter2 = new ArrayAdapter<String>(SequencerActivity.this, android.R.layout.simple_spinner_item, chords);
+                ArrayAdapter<String> chordAdapter2 = new ArrayAdapter<String>(SequencerActivity.this, R.layout.spinner_item, chords);
 
                 chordAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerChord2.setAdapter(chordAdapter2);
@@ -211,7 +213,7 @@ public class SequencerActivity extends Activity implements AdapterView.OnItemSel
                 final Button buttonPlay3 = (Button)findViewById(R.id.buttonPlay3);
                 String [] chords = ukuleleChordUtil.createUkuleleChords(selected_tuning);
 
-                ArrayAdapter<String> chordAdapter3 = new ArrayAdapter<String>(SequencerActivity.this, android.R.layout.simple_spinner_item, chords);
+                ArrayAdapter<String> chordAdapter3 = new ArrayAdapter<String>(SequencerActivity.this, R.layout.spinner_item, chords);
 
                 chordAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerChord3.setAdapter(chordAdapter3);
@@ -248,52 +250,6 @@ public class SequencerActivity extends Activity implements AdapterView.OnItemSel
 
             }
         });
-
-        spinnerNote4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String selected_tuning = parent.getItemAtPosition(position).toString();
-
-                Spinner spinnerChord4 = (Spinner)findViewById(R.id.spinnerChord4);
-                final Button buttonPlay4 = (Button)findViewById(R.id.buttonPlay4);
-                String [] chords = ukuleleChordUtil.createUkuleleChords(selected_tuning);
-
-                ArrayAdapter<String> chordAdapter4 = new ArrayAdapter<String>(SequencerActivity.this, android.R.layout.simple_spinner_item, chords);
-
-                chordAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinnerChord4.setAdapter(chordAdapter4);
-                spinnerChord4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        setSelectedChord(parent.getItemAtPosition(position).toString(), 4);
-                        ImageView imageViewChord4 = (ImageView)findViewById(R.id.imageViewChord4);
-                        imageViewChord4.setImageResource(chordDrawableHashMap.get(selected_chord4));
-
-
-                        buttonPlay4.setOnClickListener(new View.OnClickListener(){
-
-                            public void onClick(View v) {
-                                stopPlaying();
-                                mediaPlayer = MediaPlayer.create(SequencerActivity.this, chordRawHashMap.get(selected_chord4));
-                                mediaPlayer.start();
-                            }
-                        });
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-
-                    }
-                });
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
     }
 
     @Override

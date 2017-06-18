@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background">
@@ -17,6 +18,12 @@
             android:layout_weight="1" />
         <Spinner
             android:id="@+id/spinnerNote2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1" />
+        <Spinner
+            android:id="@+id/spinnerNote3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -40,6 +47,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinnerChord3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1" />
     </TableRow>
 
     <TableRow
@@ -54,6 +68,10 @@
             android:layout_height="wrap_content" />
         <ImageView
             android:id="@+id/imageViewChord2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/imageViewChord3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </TableRow>
@@ -72,7 +90,7 @@
             android:layout_marginRight="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_play_arrow" />
+            android:text="@string/tuner_play_note"  />
         <Button
             android:id="@+id/buttonPlay2"
             style="@style/CategoryStyle"
@@ -81,67 +99,7 @@
             android:layout_marginRight="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_play_arrow" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-
-        <Spinner
-            android:id="@+id/spinnerNote3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
-        <Spinner
-            android:id="@+id/spinnerNote4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <Spinner
-            android:id="@+id/spinnerChord3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
-        <Spinner
-            android:id="@+id/spinnerChord4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center">
-        <ImageView
-            android:id="@+id/imageViewChord3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <ImageView
-            android:id="@+id/imageViewChord4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center">
+            android:text="@string/tuner_play_note"  />
 
         <Button
             android:id="@+id/buttonPlay3"
@@ -151,19 +109,67 @@
             android:layout_marginRight="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_play_arrow" />
-
-        <Button
-            android:id="@+id/buttonPlay4"
-            style="@style/CategoryStyle"
-            android:background="@drawable/gradient_background"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_play_arrow" />
-
+            android:text="@string/tuner_play_note" />
     </TableRow>
+
+    <!--<TableRow-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" >-->
+
+
+
+        <!--<Spinner-->
+            <!--android:id="@+id/spinnerNote4"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_weight="1" />-->
+    <!--</TableRow>-->
+
+    <!--<TableRow-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" >-->
+
+
+        <!--<Spinner-->
+            <!--android:id="@+id/spinnerChord4"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_weight="1" />-->
+    <!--</TableRow>-->
+
+    <!--<TableRow-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:gravity="center">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageViewChord4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+    <!--</TableRow>-->
+
+    <!--<TableRow-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:gravity="center">-->
+
+
+        <!--<Button-->
+            <!--android:id="@+id/buttonPlay4"-->
+            <!--style="@style/CategoryStyle"-->
+            <!--android:background="@drawable/gradient_background"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:srcCompat="@drawable/ic_play_arrow" />-->
+
+    <!--</TableRow>-->
 
     <TableRow
         android:layout_width="wrap_content"
@@ -171,18 +177,31 @@
         android:layout_gravity="center_horizontal"
         android:gravity="center">
 
-        <Button
-            android:id="@+id/buttonStopNote"
-            style="@style/CategoryStyle"
-            android:gravity="center"
-            android:background="@drawable/gradient_background"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="11dp"
-            android:text="@string/tuner_stop_note" />
+
     </TableRow>
+    <Button
+        android:id="@+id/buttonStopNote"
+        style="@style/CategoryStyle"
+        android:gravity="center"
+        android:background="@drawable/gradient_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/tuner_stop_note" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/sequencerAdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="100dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
 
 </TableLayout>

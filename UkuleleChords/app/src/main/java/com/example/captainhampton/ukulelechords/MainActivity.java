@@ -38,16 +38,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        // Start the scales activity
-//        TextView textViewScales = (TextView) findViewById(R.id.ukuleleScalesTextView);
-//        textViewScales.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent scalesIntent = new Intent(MainActivity.this, ScalesActivity.class);
-//                startActivity(scalesIntent);
-//            }
-//        });
-
         // Start the ukulele chord sequencer activity
         TextView textViewSequencer = (TextView) findViewById(R.id.ukuleleChordSequencerTextView);
         textViewSequencer.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void displayBannerAd() {
         AdView adView = (AdView)findViewById(R.id.mainAdView);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
+        //AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
+        AdRequest adRequest = new AdRequest.Builder().build();
 
         adView.loadAd(adRequest);
     }

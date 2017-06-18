@@ -2,13 +2,10 @@ package com.example.captainhampton.ukulelechords;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-
-import org.w3c.dom.Text;
 
 public class AboutActivity extends AppCompatActivity {
 
@@ -39,7 +36,7 @@ public class AboutActivity extends AppCompatActivity {
 
     public void displayBannerAd() {
         AdView adView = (AdView)findViewById(R.id.aboutAdView);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
+        AdRequest adRequest = new AdRequest.Builder().build();
 
         adView.loadAd(adRequest);
     }
