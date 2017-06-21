@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.captainhampton.ukulelechords">
+    package="com.ukulele.captainhampton.ukulelechords">
 
     <meta-data
         android:name="com.google.android.gms.version"
@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.ukulele.captainhampton.ukulelechords.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,31 +25,31 @@
         </activity>
 
         <activity
-            android:name=".UkuleleActivity"
+            android:name="com.ukulele.captainhampton.ukulelechords.UkuleleActivity"
             android:label="@string/category_ukulele" />
 
         <activity
-            android:name=".UkuleleChordActivity"
+            android:name="com.ukulele.captainhampton.ukulelechords.UkuleleChordActivity"
             android:label="@string/category_chord" />
 
         <activity
-            android:name=".UkuleleSelectedChordActivity"
+            android:name="com.ukulele.captainhampton.ukulelechords.UkuleleSelectedChordActivity"
             android:label="@string/category_selected_chord" />
 
         <activity
-            android:name=".TunerActivity"
+            android:name="com.ukulele.captainhampton.ukulelechords.TunerActivity"
             android:label="@string/category_ukulele_tuner" />
 
         <activity
-            android:name=".ScalesActivity"
+            android:name="com.ukulele.captainhampton.ukulelechords.ScalesActivity"
             android:label="@string/category_ukulele_scales" />
 
         <activity
-            android:name=".SequencerActivity"
+            android:name="com.ukulele.captainhampton.ukulelechords.SequencerActivity"
             android:label="@string/category_ukulele_chord_sequencer" />
 
         <activity
-            android:name=".AboutActivity"
+            android:name="com.ukulele.captainhampton.ukulelechords.AboutActivity"
             android:label="@string/category_about" />
 
         <activity
